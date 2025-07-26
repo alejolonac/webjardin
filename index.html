@@ -29,6 +29,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
         
     <!-- CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     <link rel="stylesheet" href="assets/d/CSS/variables.css">
     <link rel="stylesheet" href="assets/d/CSS/style.css">
     <link rel="stylesheet" href="assets/d/CSS/responsive.css">
@@ -40,9 +41,20 @@
 </head>
 <body>
     <header class="fondo">
+        <div class="carousel">
+            <div class="carousel__slide active" style="background-image: url('imagenes/imagenfondo1.png')"></div>
+            <div class="carousel__slide" style="background-image: url('imagenes/imagenfondo2.png')"></div>
+            <div class="carousel__slide" style="background-image: url('imagenes/imagenfondo3png.png')"></div>
+            <button class="carousel__arrow carousel__arrow--prev" aria-label="Anterior">&#10094;</button>
+            <button class="carousel__arrow carousel__arrow--next" aria-label="Siguiente">&#10095;</button>
+        </div>
+        <div class="header__content">
+            <h1 class="carousel__title">Jardín Maternal Pequeñas Abejitas</h1>
+            <p class="carousel__text">Educando con amor y dedicación</p>
+        </div>
         <nav class="nav">
             <a class="nav__logo">
-                <img src="imagenes/#" alt="logo">
+                <img class="nav__logo-img" src="imagenes/logopequeñasabejitas.png" alt="logo">
             </a>
             <button class="nav__toggle" aria-label="Abrir menú">
                 <span class="nav__toggle-bar"></span>
@@ -50,39 +62,56 @@
                 <span class="nav__toggle-bar"></span>
             </button>
             <ul class="nav__list">
-                <li class="nav__item"><a class="nav__link" href="#">inicio</a></li>
-                <li class="nav__item"><a class="nav__link" href="#">generico</a></li>
-                <li class="nav__item"><a class="nav__link" href="#">generico</a></li>
-                <li class="nav__item"><a class="nav__link" href="#">generico</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">inscripciones</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">instalaciones</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">nosotros</a></li>
+                <li class="nav__item"><a class="nav__link" href="#">ubicacion</a></li>
             </ul>
+            <div class="nav__icons"> 
+                <a href="#" target="_blank" rel="noopener noreferrer"    class="nav__icon-ig">
+                    <img src="imagenes/icons8-círculo-instagram-60.png" alt="Síguenos en Instagram">
+                </a>    
+    
+                <a href="#"target="_blank" rel="noopener noreferrer" class="nav__icon">
+                    <img src="imagenes/icons8-whatsapp-50.png"alt="Contáctanos por WhatsApp">
+                </a>
+    
+                <a href="#" target="_blank" rel="noopener noreferrer"    class="nav__icon">
+                    <img src="imagenes/icons8-facebook-nuevo-50.png" alt="Síguenosen Facebook">
+                </a>
+            </div>
         </nav>
-        <section class="hero">
-            <h1 class="titulo">
-                TITULO
-            </h1>
-        </section>
     </header>
     <main>
-        <h2 class="subtitulo">SUBTITULO ACA</h2>
-        <p class="descripcion">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores quod doloribus voluptates et molestias magni quibusdam, ex rerum placeat amet repellendus voluptate tempora, possimus nulla ad magnam fuga repellat nobis?</p>
-
-        <section class="bloques">
-            <div class="bloque">
-                <h3 class="bloque__titulo">TITULO DE BLOQUES</h3>
-                <p class="bloque__info">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis, pariatur? Nam, quam deleniti voluptatem, explicabo doloribus itaque magni eligendi et sequi dolore quod eaque? Commodi hic corrupti repellendus aliquam optio.</p>
-            </div>
-            <div class="bloque">
-                <h3 class="bloque__titulo">TITULO DE BLOQUES</h3>
-                <p class="bloque__info">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis, pariatur? Nam, quam deleniti voluptatem, explicabo doloribus itaque magni eligendi et sequi dolore quod eaque? Commodi hic corrupti repellendus aliquam optio.</p>
-            </div>
-            <div class="bloque">
-                <h3 class="bloque__titulo">TITULO DE BLOQUES</h3>
-                <p class="bloque__info">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis, pariatur? Nam, quam deleniti voluptatem, explicabo doloribus itaque magni eligendi et sequi dolore quod eaque? Commodi hic corrupti repellendus aliquam optio.</p>
-            </div>
-        </section>
+        <h2 class="inscripciones__titulo">¡INSCRIPCIONES ABIERTAS!</h2>
+        <p class="inscripciones__mes">AGOSTO 2025</p>
+        <p class="inscripciones__edad">De 45 días a 3 años.</p>
+        <div class="boton__container">
+            <a href="https://wa.me/5492995881199" class="boton__inscripcion">¡consultá cupos disponibles!</a>
+        </div>
 
         <section class="galeria">
-            <div class="galeria__info"></div>
+            <div class="splide" role="group">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <img src="imagenes/instalacion1.png" alt="Instalación 1">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="imagenes/instalacion2.png" alt="Instalación 2">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="imagenes/instalacion3.png" alt="Instalación 3">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="imagenes/instalacion4.png" alt="Instalación 4">
+                        </li>
+                        <li class="splide__slide">
+                            <img src="imagenes/instalacion5.png" alt="Instalación 5">
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <section class="items">
@@ -130,6 +159,7 @@
         <p class="footer__bottom">&copy; 2025 nombre de la empresa. Todos los derechos reservados.</p>
     </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 <script src="assets/d/js/main.js"></script>
 <script src="assets/d/js/animaciones.js"></script>
 </body>

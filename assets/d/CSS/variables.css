@@ -1,0 +1,36 @@
+:root {
+    /* Colores principales */
+    --color-primary: #f9bf0b;
+    --color-secondary: #5c3916;
+    --color-accent: #ffffff;
+    --color-background: #1e1e1e;
+    --color-text: #212529;
+
+    /* Espaciados */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2x1: 2.5rem;
+    --spacing-3x1: 3rem;
+    --spacing-4x1: 4rem;
+
+    /* Tamaños de fuente */
+    --font-size-sm: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.5rem;
+    --font-size-2xl: 2rem;
+    --font-size-3x1: 2.5rem;
+    --font-size-4x1: 3rem;
+    --font-size-5x1: 4rem; 
+
+    /* Breakpoints */
+    --breakpoint-tablet: 768px;
+    --breakpoint-desktop: 1024px;
+
+    /* Otros */
+    --border-radius: 0.25rem;
+    --transition-speed: 0.3s;
+}

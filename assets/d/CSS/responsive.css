@@ -1,0 +1,129 @@
+/* Tablet y COMPU*/
+@media (min-width: 768px) {
+    /* Ocultar menú hamburguesa */
+    .nav__toggle {
+        display: none;
+    }
+
+    /* Ajustar lista de navegación */
+    .nav__list {
+        position: static;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        flex-direction: row;
+        padding: 0;
+        gap: var(--spacing-2x1);
+        margin-top: 30px;
+    }
+
+    .nav__item {
+        margin: 0;
+    }
+
+    .nav__link {
+        font-size: var(--font-size-xl);
+        position: relative;
+        transition: var(--transition-speed);
+        color: var(--color-accent);
+    }
+
+    .nav__link::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--color-accent);
+        transition: var(--transition-speed);
+    }
+
+    .nav__link:hover::after,
+    .nav__link.active::after {
+        width: 100%;
+    }
+
+    .nav__logo-img {
+        max-height: 150px;
+    }
+
+    .nav__icons {
+        display: flex;
+        z-index: 10;
+        gap: 50px;
+        margin-right: 10px;
+    }
+
+    .nav__icon {
+        width: 30px;
+        height: 30px;
+        margin-top: 30px;
+    }
+
+    .nav__icon-ig {
+        margin-top: 28px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .fondo {
+        height: 100vh;
+    }
+
+    .carousel__title {
+        font-size: var(--font-size-4x1);
+        max-width: 1400px;
+    }
+
+    .carousel__text {
+        font-size: 1.7rem;
+    }
+
+    .footer__sections {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        gap: var(--spacing-4x1);
+    }
+
+    .footer__section {
+        width: 300px;
+    }
+
+    .footer__title, .footer__titlepp {
+        font-size: var(--font-size-lg);
+        margin-top: 30px;
+    }
+
+    .footer__text {
+        font-size: var(--font-size-lg);
+    }
+
+    .splide {
+        width: 95%;
+        max-width: 1400px;
+        padding: 20px 0;
+    }
+
+    .splide__slide {
+        padding: 15px;
+    }
+
+    .splide__slide img {
+        height: 300px;
+        transition: transform 0.3s ease;
+    }
+
+    .splide__slide:hover img {
+        transform: scale(1.05);
+    }
+
+    .splide__arrow {
+        width: 50px !important;
+        height: 50px !important;
+    }
+}
+
+
