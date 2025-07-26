@@ -22,7 +22,7 @@
     }
 
     .nav__link {
-        font-size: 1.5rem;
+        font-size: var(--font-size-lg);
         position: relative;
         transition: var(--transition-speed);
         color: var(--color-accent);
@@ -52,10 +52,10 @@
         display: flex;
         z-index: 10;
         gap: 30px;
-        margin-right: 10px;
+        margin-right: 25px;
     }
 
-    .nav__icon, .nav__icon-ig {
+    .nav__icon {
         width: 30px;
         height: 30px;
         margin-top: 30px;
@@ -63,8 +63,8 @@
 
     .nav__icon-ig {
         margin-top: 28px;
-        width: 37px;
-        height: 30px;
+        height: 20px;
+        width: 40px;
     }
 
     .fondo {
@@ -72,12 +72,12 @@
     }
 
     .carousel__title {
-        font-size: 3rem;
+        font-size: var(--font-size-3x1);
         max-width: 1400px;
     }
 
     .carousel__text {
-        font-size: 1.7rem;
+        font-size: var(--font-size-xl);
     }
 
     .footer__sections {
@@ -121,8 +121,8 @@
     }
 
     .splide__arrow {
-        width: 50px;
-        height: 50px;
+        width: 50px !important;
+        height: 50px !important;
     }
 }
 
