@@ -17,14 +17,14 @@
     --spacing-4x1: 4rem;
 
     /* Tamaños de fuente */
-    --font-size-sm: 0.875rem;
-    --font-size-base: 1rem;
-    --font-size-lg: 1.25rem;
-    --font-size-xl: 1.5rem;
-    --font-size-2xl: 2rem;
-    --font-size-3x1: 2.5rem;
-    --font-size-4x1: 3rem;
-    --font-size-5x1: 4rem; 
+    --font-size-sm: 0.875rem;      /* 14px */
+    --font-size-base: 1rem;        /* 16px */
+    --font-size-lg: 1.125rem;      /* 18px */
+    --font-size-xl: 1.25rem;       /* 20px */
+    --font-size-2xl: 1.5rem;       /* 24px */
+    --font-size-3x1: 2rem;         /* 32px */
+    --font-size-4x1: 2.5rem;       /* 40px */
+    --font-size-5x1: 3rem;         /* 48px */
 
     /* Breakpoints */
     --breakpoint-tablet: 768px;
@@ -33,4 +33,9 @@
     /* Otros */
     --border-radius: 0.25rem;
     --transition-speed: 0.3s;
+
+    /* Tamaños de iconos */
+    --icon-size-sm: 20px;
+    --icon-size-md: 25px;
+    --icon-size-lg: 30px;
 }
