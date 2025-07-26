@@ -80,6 +80,25 @@
         font-size: var(--font-size-xl);
     }
 
+    .inscripciones__titulo {
+        font-size: var(--font-size-3x1);
+        margin-top: 50px;
+        margin-bottom: 25px;
+    }
+
+    .boton__inscripcion { 
+        font-size: var(--font-size-lg);
+        margin-top: 15px;
+    }
+
+    .galeria {
+        margin-top: 10rem;
+    }
+
+    .galeria__titulo {
+        font-size: var(--font-size-2xl);
+    }
+
     .footer__sections {
         max-width: 1400px;
         margin: 0 auto;
@@ -103,7 +122,7 @@
 
     .splide {
         width: 95%;
-        max-width: 1400px;
+        max-width: 1200px;
         padding: 20px 0;
     }
 
@@ -121,8 +140,16 @@
     }
 
     .splide__arrow {
-        width: 50px !important;
-        height: 50px !important;
+        width: 50px;
+        height: 50px;
+    }
+
+    .splide__arrow--prev {
+        left: -30px;
+    }
+
+    .splide__arrow--next {
+        right: -30px;
     }
 }
 
