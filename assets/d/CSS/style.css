@@ -358,7 +358,6 @@ ul {
 
 .formulario {
     max-width: 1150px;
-    margin: auto;
     background-color: var(--color-primary);
     border-radius: 24px;
     padding: 2rem;
@@ -419,9 +418,7 @@ textarea {
 }
 
 .formulario__img {
-    margin: 0 auto;
-    display: block;
-    max-width: 100%;
+    display: none;
 }
 
 .formulario__texto {
@@ -448,3 +445,6 @@ textarea {
     display: block;
 }
 
+.footer__bottom {
+    color: var(--color-accent);
+}

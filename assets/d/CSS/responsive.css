@@ -151,6 +151,39 @@
     .splide__arrow--next {
         right: -30px;
     }
+
+    .nosotros__titulo {
+        font-size: var(--font-size-2xl);
+    }
+
+    .nosotros__texto {
+        margin: 0 auto;
+        margin-bottom: 100px;
+        font-size: var(--font-size-lg);
+    }
+
+    .formulario {
+        margin: 0 auto;
+    }
+
+    .formulario__contacto {
+        display: flex;
+        width: 50%;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .formulario__img {
+        margin: 0 auto;
+        display: block;
+        max-width: 100%;
+        height: 48px;
+    }
+
+    .mapa {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
 }
 
 
