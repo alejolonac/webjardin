@@ -488,6 +488,13 @@ textarea {
     color: var(--color-accent);
 }
 
+.inscripciones__edad.scroll-reveal,
+.boton__container.scroll-reveal {
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+
 /* Animaciones de scroll */
 .scroll-reveal {
     opacity: 0;
@@ -500,6 +507,7 @@ textarea {
     opacity: 1;
     transform: translateY(0);
     visibility: visible;
+    position: relative;
 }
 
 /* Animación para la sección activa */
