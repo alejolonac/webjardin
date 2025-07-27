@@ -87,19 +87,24 @@ document.addEventListener('DOMContentLoaded', function() {
     const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
     
     function checkScroll() {
-        scrollRevealElements.forEach(element => {
+        scrollRevealElements.forEach((element, index) => {
             const elementTop = element.getBoundingClientRect().top;
             const windowHeight = window.innerHeight;
             
+            // Si el elemento está en el viewport o si estamos en la carga inicial
             if (elementTop < windowHeight * 0.8) {
-                element.classList.add('active');
+                // Añadir un pequeño retraso secuencial para cada elemento
+                setTimeout(() => {
+                    element.classList.add('active');
+                }, index * 200); // 200ms de retraso entre cada elemento
             }
         });
     }
 
     // Verificar elementos al cargar y al hacer scroll
     window.addEventListener('scroll', checkScroll);
-    window.addEventListener('load', checkScroll); // Añadir verificación al cargar
-    checkScroll(); // Verificación inicial
+    window.addEventListener('load', checkScroll);
+    // Ejecutar también al inicio para elementos visibles
+    setTimeout(checkScroll, 100); // Pequeño retraso inicial
 });
 

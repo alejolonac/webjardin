@@ -1,12 +1,3 @@
-/* Móvil */
-@media (max-width: 767px) {
-    .boton__container.scroll-reveal {
-        opacity: 1 !important;
-        transform: none !important;
-        visibility: visible !important;
-    }
-}
-
 /* Tablet y COMPU*/
 @media (min-width: 768px) {
     /* Ocultar menú hamburguesa */
