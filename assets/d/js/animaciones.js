@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Función de scroll suave personalizada
     function smoothScroll(target, duration) {
-        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - 300;
+        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - 260;
         const startPosition = window.pageYOffset;
         const distance = targetPosition - startPosition;
         let startTime = null;
