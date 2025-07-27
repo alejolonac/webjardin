@@ -516,10 +516,6 @@ textarea {
     animation: fadeInUp 1.2s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
 }
 
-main {
-    padding-top: 120px; /* Añadimos espacio para el nav fijo */
-}
-
 .nav-scrolled .nav__toggle-bar {
     background-color: var(--color-secondary);
 }
