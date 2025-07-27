@@ -2,6 +2,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const navToggle = document.querySelector('.nav__toggle');
     const navList = document.querySelector('.nav__list');
     const navLinks = document.querySelectorAll('.nav__link');
+    const nav = document.querySelector('.nav'); // Añadimos esta línea
+
+    // Detectar scroll para cambiar el fondo del nav
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            nav.classList.add('nav-scrolled');
+        } else {
+            nav.classList.remove('nav-scrolled');
+        }
+    });
 
     // Toggle menú
     navToggle.addEventListener('click', function() {
@@ -13,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Función de scroll suave personalizada
     function smoothScroll(target, duration) {
-        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - 100; // -100px de offset
+        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - 150; // 150px de offset para todos
         const startPosition = window.pageYOffset;
         const distance = targetPosition - startPosition;
         let startTime = null;
