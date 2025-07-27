@@ -89,7 +89,7 @@ ul {
     align-items: center;
     justify-content: center;
     transition: color 0.3s ease;
-    z-index: 2;
+    z-index: 99999;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -99,10 +99,12 @@ ul {
 
 .carousel__arrow--prev {
     left: 20px;
+    z-index: 38;
 }
 
 .carousel__arrow--next {
     right: 20px;
+    z-index: 38;
 }
 
 /* Eliminar los estilos antiguos de los puntos */
