@@ -299,7 +299,8 @@ ul {
 .inscripciones__titulo {
     color: var(--color-primary);
     text-align: center;
-    margin: 30px 20px 10px 20px; 
+    margin: 30px 20px 10px 20px;
+    min-height: 0; /* Añadido */
 }
 
 .inscripciones__mes {
@@ -309,6 +310,7 @@ ul {
     margin-top: 0;
     font-weight: 600;
     margin-bottom: 10px;
+    min-height: 0; /* Añadido */
 }
 
 .inscripciones__edad {
@@ -316,12 +318,14 @@ ul {
     text-align: center;
     font-size: 1.2rem;
     margin-top: 0;
+    min-height: 0; /* Añadido */
 }
 
 .boton__container {
     display: flex;
     justify-content: center;
-    margin: 20px 0;
+    margin: 0; /* Modificado */
+    min-height: 0; /* Añadido */
 }
 
 .boton__inscripcion {
@@ -332,6 +336,7 @@ ul {
     display: inline-block;
     font-weight: 600;
     box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+    margin: 20px 0; /* Movido del contenedor al botón */
 }
 
 .galeria {
@@ -494,12 +499,16 @@ textarea {
     transform: translateY(20px);
     transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
     visibility: hidden;
+    min-height: 0; /* Añadido */
+    overflow: hidden; /* Añadido */
 }
 
 .scroll-reveal.active {
     opacity: 1;
     transform: translateY(0);
     visibility: visible;
+    min-height: auto; /* Añadido */
+    overflow: visible; /* Añadido */
 }
 
 /* Animación para la sección activa */
