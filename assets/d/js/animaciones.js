@@ -11,9 +11,54 @@ document.addEventListener('DOMContentLoaded', function() {
         );
     });
 
-    // Cerrar menú al hacer click en un enlace
+    // Función de scroll suave personalizada
+    function smoothScroll(target, duration) {
+        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - 100; // -100px de offset
+        const startPosition = window.pageYOffset;
+        const distance = targetPosition - startPosition;
+        let startTime = null;
+
+        function animation(currentTime) {
+            if (startTime === null) startTime = currentTime;
+            const timeElapsed = currentTime - startTime;
+            const run = ease(timeElapsed, startPosition, distance, duration);
+            window.scrollTo(0, run);
+            if (timeElapsed < duration) requestAnimationFrame(animation);
+        }
+
+        // Función de ease-in-out cúbica
+        function ease(t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return c / 2 * t * t * t + b;
+            t -= 2;
+            return c / 2 * (t * t * t + 2) + b;
+        }
+
+        requestAnimationFrame(animation);
+    }
+
+    // Scroll suave para los enlaces del nav con animación
     navLinks.forEach(link => {
-        link.addEventListener('click', () => {
+        link.addEventListener('click', (e) => {
+            if (link.hash) {
+                e.preventDefault();
+                const targetSection = document.querySelector(link.hash);
+                
+                if (targetSection) {
+                    // Remover clase active de todas las secciones
+                    document.querySelectorAll('section').forEach(section => {
+                        section.classList.remove('section-active');
+                    });
+
+                    // Añadir clase para la animación
+                    targetSection.classList.add('section-active');
+                    
+                    // Aplicar scroll suave personalizado
+                    smoothScroll(targetSection, 1500); // 1500ms = 1.5 segundos de duración
+                }
+            }
+            
+            // Cerrar menú al hacer click
             navList.classList.remove('active');
             navToggle.setAttribute('aria-expanded', 'false');
         });
@@ -27,5 +72,23 @@ document.addEventListener('DOMContentLoaded', function() {
             navToggle.setAttribute('aria-expanded', 'false');
         }
     });
+
+    // Animación de elementos al hacer scroll
+    const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
+    
+    function checkScroll() {
+        scrollRevealElements.forEach(element => {
+            const elementTop = element.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            
+            if (elementTop < windowHeight * 0.8) {
+                element.classList.add('active');
+            }
+        });
+    }
+
+    // Verificar elementos al cargar y al hacer scroll
+    window.addEventListener('scroll', checkScroll);
+    checkScroll(); // Verificar elementos visibles al cargar
 });
 

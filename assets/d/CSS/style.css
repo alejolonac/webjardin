@@ -449,3 +449,31 @@ textarea {
 .footer__bottom {
     color: var(--color-accent);
 }
+
+/* Animaciones de scroll */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.scroll-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animación para la sección activa */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-active {
+    animation: fadeInUp 1.2s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+}
