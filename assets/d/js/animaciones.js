@@ -99,6 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Verificar elementos al cargar y al hacer scroll
     window.addEventListener('scroll', checkScroll);
-    checkScroll(); // Verificar elementos visibles al cargar
+    window.addEventListener('load', checkScroll); // Añadir verificación al cargar
+    checkScroll(); // Verificación inicial
 });
 
